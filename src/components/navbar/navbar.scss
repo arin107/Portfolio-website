@@ -1,0 +1,57 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  background-color: #10102f;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    span {
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+      height: 100%;
+      justify-content: end;
+      align-items: center;
+
+      img {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.2s ease-in-out; // Add a transition for smooth scaling
+  
+        &:hover {
+          transform: scale(3); // Increase the scale factor as needed
+        }
+      }
+    }
+  }
+}
+
+.navbar:hover {
+  background-color: rgb(94, 89, 124);
+  font-size: 28px;
+  .social img {
+    transform: scale(2);
+    transition: transform 0.2s ease-in-out;
+    padding: 20%; // Increase the scale factor as needed
+  }
+}
+
